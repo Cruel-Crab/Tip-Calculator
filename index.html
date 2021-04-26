@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIP Calculator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/TipCalcFavicon.png">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+  	<main id="container"> <!--oninput="update()": will trigger when any input gets a value on the page -->
+  		<h1>Quick Tip</h1>
+
+  		<section>
+  			<div class="bill">
+  				<label for="yourBill">Bill</label>
+  				<input type="number" placeholder="Your Bill" id="yourBill" >
+  			</div>
+
+  			<div>  				<div class="space-between">
+  					<label for="selectTip">Select Tip</label>
+  					<span id="tipPercent">0 %</span>
+  				</div>
+  				<input type="range" id="selectTip" value="0" class="range">
+  			</div>
+
+  			<div class="space-between">
+  				<span>Tip</span>
+  				<span id="tipValue"></span>
+  			</div>
+  			<hr>
+  			<div class="space-between total">
+  				<span>Total</span>
+  				<span id="totalWithTip"></span>
+  			</div>
+  		</section>
+
+  		<section>
+  			<div>
+  				<div class="space-between">
+  					<label for="splitInput">Split</label>
+  					<span id="splitValue"></span>
+  				</div>
+  				<input type="range" id="splitInput" min="1" max="10" value="1" class="range">
+  			</div>
+
+  			<div class="space-between">
+  				<span>Bill Each</span>
+  				<span id="billEach"></span>
+  			</div>
+
+  			<div class="space-between">
+  				<span>Tip Each</span>
+  				<span id="tipEach"></span>
+  			</div>
+  		</section>
+  	</main>
+    <script src="./main.js"></script>
+  </body>
+</html>
